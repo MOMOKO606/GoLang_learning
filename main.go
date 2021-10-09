@@ -23,6 +23,9 @@ func main() {
 	var isGogood bool //  The default value of a bool variable is false.
 	isGogood = true
 	isGobad := false
+	//  complex类型.
+	var c0 complex128 = 2 + 2i
+	c1 := 2 - 2i
 
 	//  2.2.2 constant.
 	const Pi float64 = 3.1415926
@@ -33,4 +36,5 @@ func main() {
 	fmt.Println("b1 + b2 + b3 =", b1+b2+b3)
 	fmt.Println("a4 =", a4)
 	fmt.Println("Is Go good?", isGogood, "\n", "Is Go bad?", isGobad)
+	fmt.Println("Multiplication of complex nums: ", c0*c1)
 }
