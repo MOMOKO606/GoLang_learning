@@ -94,6 +94,20 @@ func main() {
 	s03 := arr05[2:4]   // s03.cap为从arr05的index 2到9的长度，8.
 	s04 := arr05[2:4:7] //  指定cap到index=7但不包含7 => cap = 5
 
+	//  2.2.6  map = dict in Python.
+	// Method 1:
+	// 声明一个key是字符串，值为int的字典,这种方式的声明需要在使用之前使用make初始化
+	var numbers map[string]int
+	// 另一种map的声明方式
+	numbers = make(map[string]int)
+	numbers["one"] = 1  //赋值
+	numbers["ten"] = 10 //赋值
+	numbers["three"] = 3
+
+	//  Method 2:
+	//  声明赋值同时
+	rating := map[string]float32{"C": 5, "Go": 4.5, "Python": 4.5, "C++": 2}
+
 	fmt.Println("a0 =", a0)
 	fmt.Println("a1 + a2 + a3 =", a1+a2+a3)
 	fmt.Println("b1 + b2 + b3 =", b1+b2+b3)
@@ -109,4 +123,6 @@ func main() {
 	fmt.Println("Show the slice s01 & s02: ", s01, s02)
 	fmt.Println("Show the cap of s03: ", cap(s03))
 	fmt.Println("Show the cap of s04: ", cap(s04))
+	fmt.Println("第三个数字是: ", numbers["three"])
+	fmt.Println("Show the map rating: ", rating)
 }
