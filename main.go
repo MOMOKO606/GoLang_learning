@@ -70,6 +70,14 @@ func main() {
 	)
 	const a9 = iota
 
+	//  2.2.4  array.
+	//  Method 1, declare => assign values
+	var arr01 [5]float64
+	arr01[1] = 100
+	//  Method 2. declare & assign simultaneously.
+	//  定义了一个长度为8，并给前5个数赋初值，其他值默认为0。
+	arr02 := [8]int{0, 1, 2, 3, 4}
+
 	fmt.Println("a0 =", a0)
 	fmt.Println("a1 + a2 + a3 =", a1+a2+a3)
 	fmt.Println("b1 + b2 + b3 =", b1+b2+b3)
@@ -79,4 +87,5 @@ func main() {
 	fmt.Println("Again:", str)
 	fmt.Println("%s\n", message)
 	fmt.Println("Test iota:", a5, a6, a7, a8, a9)
+	fmt.Println("Show the array arr02: ", arr02)
 }
