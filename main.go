@@ -19,13 +19,26 @@ func main() {
 	var b1, b2, b3 = a1, a2, a3
 	//  也可以省略关键字var，直接用:=，像Python和MATLAB那样。
 	_, a4 := 1988, 8
+
 	//  boolean类型.
 	var isGogood bool //  The default value of a bool variable is false.
 	isGogood = true
 	isGobad := false
+
 	//  complex类型.
 	var c0 complex128 = 2 + 2i
 	c1 := 2 - 2i
+
+	//  string.
+	//  Notice that string is immutable.
+	var hello string = "Hello"
+	world := "World!"
+	str := hello + " " + world
+
+	// One way for changing the characters in string.
+	tmp := []byte(str) // transfer string to byte array.
+	tmp[5] = '_'
+	str = string(tmp) //  transfer byte array to string.
 
 	//  2.2.2 constant.
 	const Pi float64 = 3.1415926
@@ -36,5 +49,6 @@ func main() {
 	fmt.Println("b1 + b2 + b3 =", b1+b2+b3)
 	fmt.Println("a4 =", a4)
 	fmt.Println("Is Go good?", isGogood, "\n", "Is Go bad?", isGobad)
-	fmt.Println("Multiplication of complex nums: ", c0*c1)
+	fmt.Println("An example of multiplication of complex nums: ", c0*c1)
+	fmt.Println("Again:", str)
 }
