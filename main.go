@@ -142,6 +142,13 @@ func main() {
 	fmt.Println("Show the cap of s04: ", cap(s04))
 	fmt.Println("第三个数字是: ", numbers["three"])
 	fmt.Println("Show the map rating: ", rating)
+bookmark:
 	fmt.Println("Show the pointers 01 & 02: ", pointer01, pointer02)
 	fmt.Println("Show the value of pointer03: ", *pointer03)
+
+	if *pointer03 == 10 {
+		*pointer03 += 1
+		goto bookmark
+	}
+
 }
