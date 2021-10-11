@@ -108,6 +108,22 @@ func main() {
 	//  声明赋值同时
 	rating := map[string]float32{"C": 5, "Go": 4.5, "Python": 4.5, "C++": 2}
 
+	//  2.2.6  pointer.
+	//  在变量名前面添加&操作符（前缀）来获取变量的内存地址（取地址操作）。
+	//  Method 1:
+	//  a0代表被取地址的变量，类型为T; pointer01的类型就为*T，称做T的指针类型; *代表指针。
+	pointer01 := &a0 //  获取a0的内存地址。
+
+	//  Method 2:
+	var pointer02 *int //  定义pointer02是指针类型。
+	pointer02 = &a1    //  赋值。
+
+	//  定义空指针。
+	var pointer03 *float64
+	pointer03 = new(float64)
+	//  对空指针的value赋值。
+	*pointer03 = 10
+
 	fmt.Println("a0 =", a0)
 	fmt.Println("a1 + a2 + a3 =", a1+a2+a3)
 	fmt.Println("b1 + b2 + b3 =", b1+b2+b3)
@@ -125,4 +141,6 @@ func main() {
 	fmt.Println("Show the cap of s04: ", cap(s04))
 	fmt.Println("第三个数字是: ", numbers["three"])
 	fmt.Println("Show the map rating: ", rating)
+	fmt.Println("Show the pointers 01 & 02: ", pointer01, pointer02)
+	fmt.Println("Show the value of pointer03: ", *pointer03)
 }
