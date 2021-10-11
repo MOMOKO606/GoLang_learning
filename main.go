@@ -117,6 +117,7 @@ func main() {
 	//  Method 2:
 	var pointer02 *int //  定义pointer02是指针类型。
 	pointer02 = &a1    //  赋值。
+	//  也可以写成 var pointer02 *int =  &a1
 
 	//  定义空指针。
 	var pointer03 *float64
